@@ -28,13 +28,13 @@ export const findByIdAndUpdate = async (req, res, next) => {
     const {_id } =req.user
    const checkUser =  await UserModel.findOne({ 
       isDeleted: false ,
-      "_id": id
+      "_id": _id
     
     });
 
    if(checkUser){
     const user = await UserModel.findByIdAndUpdate(
-      { _id:_id, isDeleted: false },
+      { _id:id, isDeleted: false },
       req.body,
       { new: true }
     );
@@ -67,14 +67,14 @@ export const findOneAndDelete = async (req, res, next) => {
 
     const checkUser =  await UserModel.findOne({ 
       isDeleted: false ,
-      "_id": id
+      "_id": _id
     
     });
 
 
 
     if(checkUser){
-      const user = await UserModel.findByIdAndDelete({ _id: _id, isDeleted: true });
+      const user = await UserModel.findByIdAndDelete({ _id: id, isDeleted: true });
       res.json({ message: "users deleted Sucsessfully", user })
   
      }else{
