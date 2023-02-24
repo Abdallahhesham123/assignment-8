@@ -1,0 +1,2227 @@
+{
+	"info": {
+		"_postman_id": "c163c887-ed99-4d32-814b-e9e4b7060b16",
+		"name": "nodec39online",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19755903"
+	},
+	"item": [
+		{
+			"name": "users-products",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "get-users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-users",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"hesham\",\r\n    \"email\" :\"abdallah_hesham@gmail.com\",\r\n    \"age\":15,\r\n    \"password\" :\"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-email-name",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"abdallah1234\",\r\n    \"email\":\"abdallah1222@gmail.com\",\r\n    \"password\":\"Iloveelectric201111\",\r\n    \"age\":40\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/user/10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user",
+										"10"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-user",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/user?id=3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"user"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "search-startingwith a andlessthan30",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/search?age=30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"search"
+									],
+									"query": [
+										{
+											"key": "age",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getalluserwithproduct",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/getalluserwithproduct",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getalluserwithproduct"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getalluserwithlistids",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/getalluserwithlistids",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"getalluserwithlistids"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "get-allproducts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "add-product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"t-Shir\",\r\n    \"description\":\"Beautiful _Clothes-red-green\",\r\n    \"price\":5000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/product?user_id=10",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"product"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete-product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/product/10?product_Id=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"product",
+										"10"
+									],
+									"query": [
+										{
+											"key": "product_Id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update-products",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"mobile2\",\r\n    \"description\":\"Smart_mobile\",\r\n    \"price\":3200\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/api/product/4/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"product",
+										"4",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all product grater than 3000",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8000/api/product/search?price=3000",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"product",
+										"search"
+									],
+									"query": [
+										{
+											"key": "price",
+											"value": "3000"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "assignment-5",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "addusers",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"abdallah123\",\r\n    \"email\":\"abdallah_hstar2009@gmail.com\",\r\n    \"password\":\"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/user/addUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"user",
+										"addUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteuser",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/user/deleteUser/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"user",
+										"deleteUser",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"abdallah\",\r\n    \"email\":\"abdallah_hesham@gmail.com\",\r\n    \"password\":\"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/user/updateUser/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"user",
+										"updateUser",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "addCategory",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"electronics\",\r\n    \"userId\":5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/category/addCategory",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"category",
+										"addCategory"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatecategory",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"devices\"\r\n \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/category/updateCategory/1/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"category",
+										"updateCategory",
+										"1",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/category/deleteCategory/7/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"category",
+										"deleteCategory",
+										"7",
+										"5"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllCategory",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/category/getAllCategory",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"category",
+										"getAllCategory"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "addproducts",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"prod66\",\r\n    \"description\":\"it is mobile\",\r\n    \"price\":2000,\r\n    \"userId\":5,\r\n    \"CatId\":1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/product/addProduct",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"addProduct"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllProducts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/product/getAllProducts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"getAllProducts"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SearchbyName",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"prod22\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/product/SearchbyName",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"SearchbyName"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteproducts",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/api/product/deleteProduct/4/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"deleteProduct",
+										"4",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "New Request",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"prod66\",\r\n    \"description\":\"it is mobilephone\",\r\n    \"price\":10000,\r\n    \"CatId\":1\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/api/product/updateProduct/12/5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"api",
+										"product",
+										"updateProduct",
+										"12",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "assignment-6",
+			"item": [
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "updateUser",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"age\":\"20\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/update/14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"update",
+										"14"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "search",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/search?age=30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"search"
+									],
+									"query": [
+										{
+											"key": "age",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteUser",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/delete/9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"delete",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getalluserwithlistids",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/getalluserwithlistids?id1=11&id2=12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"getalluserwithlistids"
+									],
+									"query": [
+										{
+											"key": "id1",
+											"value": "11"
+										},
+										{
+											"key": "id2",
+											"value": "12"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllusers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"amany123\",\r\n    \"email\":\"amany123@gmail.com\",\r\n    \"password\":\"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\r\n    \"email\":\"abdallah@gmail.com\",\r\n    \"password\":\"123456789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getuserwithproduct",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/getuserwithproduct",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"getuserwithproduct"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "addProduct",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pName\":\"oppo\", \r\n    \"pDescription\":\"it is Smart phone\",\r\n     \"price\":3000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/product?user_Id=11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "user_Id",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateProduct",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pDescription\" :\"it is smart Phone\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/product/update/1?user_Id=11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product",
+										"update",
+										"1"
+									],
+									"query": [
+										{
+											"key": "user_Id",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteProduct",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pName\" :\"TV\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/product/delete/2?user_Id=11",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product",
+										"delete",
+										"2"
+									],
+									"query": [
+										{
+											"key": "user_Id",
+											"value": "11"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "searchProduct",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/product/searchProduct?price=3000",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product",
+										"searchProduct"
+									],
+									"query": [
+										{
+											"key": "price",
+											"value": "3000"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllProduct",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/product",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "assignment-7",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n  \r\n        {\r\n            \"email\":\"abdallah@gmail.com\",\r\n            \"password\":\"123456789\"\r\n        }\r\n\r\n\r\n\r\n   \r\n\r\n   \r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n{\r\n    \r\n        \"users\":[\r\n\r\n                    {\r\n\r\n                    \"userName\":\"Roaa\",\r\n                    \"email\":\"Roaa@gmail.com\",\r\n                    \"password\":\"123456789\"\r\n                    },\r\n                   {\r\n\r\n                    \"userName\":\"abdallah\",\r\n                    \"email\":\"abdallah@gmail.com\",\r\n                    \"password\":\"123456789\"\r\n                    },\r\n\r\n                    {\r\n\r\n                    \"userName\":\"abdallah234\",\r\n                    \"email\":\"abdallah234@gmail.com\",\r\n                    \"password\":\"123456789\"\r\n                    },\r\n                                        {\r\n\r\n                    \"userName\":\"hesham\",\r\n                    \"email\":\"hesham@gmail.com\",\r\n                    \"password\":\"123456789\"\r\n                    },\r\n                                        {\r\n\r\n                    \"userName\":\"may\",\r\n                    \"email\":\"may@gmail.com\",\r\n                    \"password\":\"123456789\"\r\n                    },\r\n                                        {\r\n\r\n                    \"userName\":\"amany\",\r\n                    \"email\":\"amany@gmail.com\",\r\n                    \"password\":\"123456789\"\r\n                    }\r\n\r\n        ]\r\n    \r\n}\r\n\r\n\r\n\r\n\r\n\r\n\r\n   \r\n\r\n   \r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "update",
+							"item": [
+								{
+									"name": "updateOne",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"age\":28\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/updateOne/63ec97c2168ea8232ebcae07",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"updateOne",
+												"63ec97c2168ea8232ebcae07"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "updateMany",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/user/updateMany",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"updateMany"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findByIdAndUpdate",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"age\":28\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/findByIdAndUpdate/63ec97c2168ea8232ebcae08",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"findByIdAndUpdate",
+												"63ec97c2168ea8232ebcae08"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findOneAndUpdate",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"age\":35\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/findOneAndUpdate/63ec97c2168ea8232ebcae09",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"findOneAndUpdate",
+												"63ec97c2168ea8232ebcae09"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findOneAndReplace",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"age\":27,\r\n    \"isDeleted\": false,\r\n    \"gender\": \"Female\",\r\n    \"ComfirmEmail\":true\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/findOneAndReplace/63ec97c2168ea8232ebcae07",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"findOneAndReplace",
+												"63ec97c2168ea8232ebcae07"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"item": [
+								{
+									"name": "updateOne",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/user/deleteOne/63eb4023cb8d917afb58ed2e",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"deleteOne",
+												"63eb4023cb8d917afb58ed2e"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "deleteMany",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:5000/user/deleteMany",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"deleteMany"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findByIdAndDelete",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"age\":30\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/findByIdAndDelete/63eb4b835d87343ade798bb1",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"findByIdAndDelete",
+												"63eb4b835d87343ade798bb1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "findOneAndRemove",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"age\":30\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/findOneAndRemove/63eb4b705d87343ade798bac",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"findOneAndRemove",
+												"63eb4b705d87343ade798bac"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "getAllUsers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findOneAndDelete(hardDeleted)",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"age\":30\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/findOneAndDelete/63eaf04fda7a29da6434d950",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"findOneAndDelete",
+										"63eaf04fda7a29da6434d950"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "softDelete",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/softDelete/63ec97c2168ea8232ebcae07",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"softDelete",
+										"63ec97c2168ea8232ebcae07"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllTrashedUsers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/getAllTrashedUsers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"getAllTrashedUsers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserStartX",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/getUserStartX?startWith=a&age=30",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"getUserStartX"
+									],
+									"query": [
+										{
+											"key": "startWith",
+											"value": "a"
+										},
+										{
+											"key": "age",
+											"value": "30"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserendX",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/getUserendX?endWith=m",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"getUserendX"
+									],
+									"query": [
+										{
+											"key": "endWith",
+											"value": "m"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserContainX",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/getUserContainX?containWith=z",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"getUserContainX"
+									],
+									"query": [
+										{
+											"key": "containWith",
+											"value": "z"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserMatch",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"MatchUserOld\":\"abdallah234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/getUserMatch?MatchUserNew=abdallah234",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"getUserMatch"
+									],
+									"query": [
+										{
+											"key": "MatchUserNew",
+											"value": "abdallah234"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserWithAge",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"MatchUserOld\":\"abdallah234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/getUserWithAge?AgeGreat=30&AgeLess=20",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"getUserWithAge"
+									],
+									"query": [
+										{
+											"key": "AgeGreat",
+											"value": "30"
+										},
+										{
+											"key": "AgeLess",
+											"value": "20"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getUserById",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"MatchUserOld\":\"abdallah234\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/user/getUserById/63ec01961f84fe49819d831f",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"getUserById",
+										"63ec01961f84fe49819d831f"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "comment",
+					"item": [
+						{
+							"name": "addComment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post\":\"it is my third post\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/comment?User_Id=63eb54c3c1ad7d6641b7e640",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"comment"
+									],
+									"query": [
+										{
+											"key": "User_Id",
+											"value": "63eb54c3c1ad7d6641b7e640"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllCommentsByTheir-Information",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/comment",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"comment"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllCommentsById",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/comment/63eb54c3c1ad7d6641b7e640",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"comment",
+										"63eb54c3c1ad7d6641b7e640"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateComments",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"post\":\"it is updated post I want\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/comment/updateComment/63ec78867b78a922a25ac56f?user_Id=63eb4b8f5d87343ade798bb2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"comment",
+										"updateComment",
+										"63ec78867b78a922a25ac56f"
+									],
+									"query": [
+										{
+											"key": "user_Id",
+											"value": "63eb4b8f5d87343ade798bb2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteComments",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/comment/deleteComment/63ec78867b78a922a25ac56f?user_Id=63eb4b8f5d87343ade798bb2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"comment",
+										"deleteComment",
+										"63ec78867b78a922a25ac56f"
+									],
+									"query": [
+										{
+											"key": "user_Id",
+											"value": "63eb4b8f5d87343ade798bb2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "assignment-8",
+			"item": [
+				{
+					"name": "auth",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n  \r\n        {\r\n                     \"email\":\"abdallah123@gmail.com\",\r\n                    \"password\":\"123456789\"\r\n        }\r\n\r\n\r\n\r\n   \r\n\r\n   \r\n\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "                    {\r\n                    \"username\":\"abdallah456\",\r\n                    \"email\":\"abdallah456@gmail.com\",\r\n                    \"password\":\"123456789\",\r\n                    \"confirm_pass\":\"123456789\"\r\n                    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/auth/register",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "resetpassword",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjgxYmMxNWQwMDllNThhNWJjOTcyMSIsIm5hbWUiOiJhYmRhbGxhaDQ1NiIsImVtYWlsIjoiYWJkYWxsYWg0NTZAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJwcm9maWxlUGljdHVyZSI6IiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3NzIxNTY0NiwiZXhwIjoxNjc5ODA3NjQ2fQ.e6uyNmTlNkVGJgiqIwBnw-IBbwezi0c3M9AwN6ztWDg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"oldpassword\":\"123456789\",\r\n    \"password\":\"1234567\",\r\n    \"confirm_pass\":\"1234567\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/auth/resetpassword",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"auth",
+										"resetpassword"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "update",
+							"item": [
+								{
+									"name": "findByIdAndUpdate",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjgxYmMxNWQwMDllNThhNWJjOTcyMSIsIm5hbWUiOiJhYmRhbGxhaDQ1NiIsImVtYWlsIjoiYWJkYWxsYWg0NTZAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJwcm9maWxlUGljdHVyZSI6IiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3NzIxODI3OSwiZXhwIjoxNjc5ODEwMjc5fQ.nDH35EV1nNno97mGLWJc792EV1ZdPu7MRL0pzrgSkaM",
+													"type": "string"
+												}
+											]
+										},
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"age\":26\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/findByIdAndUpdate/63f81bc15d009e58a5bc9731",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"findByIdAndUpdate",
+												"63f81bc15d009e58a5bc9731"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"item": [
+								{
+									"name": "findByIdAndDelete",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjg1MmU4M2E0YTlmMDUxODVmZWViNSIsIm5hbWUiOiJhYmRhbGxhaDQ1NiIsImVtYWlsIjoiYWJkYWxsYWg0NTZAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJwcm9maWxlUGljdHVyZSI6IiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3NzIxODU1MywiZXhwIjoxNjc5ODEwNTUzfQ.DtyEkA4L1Ku2hnlXqda6ii6pwFVzl8XTcVXYUyMWiFE",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"age\":30\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://localhost:5000/user/findOneAndDelete/63f81bc15d009e58a5bc9721",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "5000",
+											"path": [
+												"user",
+												"findOneAndDelete",
+												"63f81bc15d009e58a5bc9721"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "getUsersdata",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjgxYmMxNWQwMDllNThhNWJjOTcyMSIsIm5hbWUiOiJhYmRhbGxhaDQ1NiIsImVtYWlsIjoiYWJkYWxsYWg0NTZAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJwcm9maWxlUGljdHVyZSI6IiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3NzIxNTY0NiwiZXhwIjoxNjc5ODA3NjQ2fQ.e6uyNmTlNkVGJgiqIwBnw-IBbwezi0c3M9AwN6ztWDg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getprofile",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjg1MmU4M2E0YTlmMDUxODVmZWViNSIsIm5hbWUiOiJhYmRhbGxhaDQ1NiIsImVtYWlsIjoiYWJkYWxsYWg0NTZAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJwcm9maWxlUGljdHVyZSI6IiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3NzIxODU1MywiZXhwIjoxNjc5ODEwNTUzfQ.DtyEkA4L1Ku2hnlXqda6ii6pwFVzl8XTcVXYUyMWiFE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/user/getprofile/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"user",
+										"getprofile",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "blog",
+					"item": [
+						{
+							"name": "addblog",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjg1MmU4M2E0YTlmMDUxODVmZWViNSIsIm5hbWUiOiJhYmRhbGxhaDQ1NiIsImVtYWlsIjoiYWJkYWxsYWg0NTZAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJwcm9maWxlUGljdHVyZSI6IiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3NzIxODU1MywiZXhwIjoxNjc5ODEwNTUzfQ.DtyEkA4L1Ku2hnlXqda6ii6pwFVzl8XTcVXYUyMWiFE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"it is my third post\",\r\n    \"body\" :\"itismy body test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/blog",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"blog"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateComments",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjg1MmU4M2E0YTlmMDUxODVmZWViNSIsIm5hbWUiOiJhYmRhbGxhaDQ1NiIsImVtYWlsIjoiYWJkYWxsYWg0NTZAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJwcm9maWxlUGljdHVyZSI6IiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3NzIxODU1MywiZXhwIjoxNjc5ODEwNTUzfQ.DtyEkA4L1Ku2hnlXqda6ii6pwFVzl8XTcVXYUyMWiFE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"it is updated post I want\",\r\n    \"body\":\"it is updated body\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5000/blog/updateBlog/63f853bc3a4a9f05185feebf",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"blog",
+										"updateBlog",
+										"63f853bc3a4a9f05185feebf"
+									],
+									"query": [
+										{
+											"key": "user_Id",
+											"value": "63eb4b8f5d87343ade798bb2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteComments",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjg1MmU4M2E0YTlmMDUxODVmZWViNSIsIm5hbWUiOiJhYmRhbGxhaDQ1NiIsImVtYWlsIjoiYWJkYWxsYWg0NTZAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJwcm9maWxlUGljdHVyZSI6IiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3NzIxODU1MywiZXhwIjoxNjc5ODEwNTUzfQ.DtyEkA4L1Ku2hnlXqda6ii6pwFVzl8XTcVXYUyMWiFE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/blog/deleteBlog/63f853bc3a4a9f05185feebf",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"blog",
+										"deleteBlog",
+										"63f853bc3a4a9f05185feebf"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "alllogwithaowner",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZjg1MmU4M2E0YTlmMDUxODVmZWViNSIsIm5hbWUiOiJhYmRhbGxhaDQ1NiIsImVtYWlsIjoiYWJkYWxsYWg0NTZAZ21haWwuY29tIiwicm9sZSI6InVzZXIiLCJwcm9maWxlUGljdHVyZSI6IiIsImlzTG9nZ2VkSW4iOnRydWUsImlhdCI6MTY3NzIxODU1MywiZXhwIjoxNjc5ODEwNTUzfQ.DtyEkA4L1Ku2hnlXqda6ii6pwFVzl8XTcVXYUyMWiFE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5000/blog/allBlog/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5000",
+									"path": [
+										"blog",
+										"allBlog",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getcommentbyid",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
